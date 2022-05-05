@@ -1,16 +1,15 @@
 import React from "react";
-import { Icon, Modal, Card } from "web3uikit";
-import { useState, useEffect } from "react";
+import {useEffect, useState} from "react";
 import {useMoralis} from "react-moralis";
+import {Card, Icon, Modal} from "web3uikit";
 
 function User({account}) {
 
-  const [isVisible, setVisible] =useState(false);
-  const { Moralis } = useMoralis();
+  const [isVisible, setVisible] = useState(false);
+  const {Moralis} = useMoralis();
   const [userRentals, setUserRentals] = useState();
 
   useEffect(() => {
-
     async function fetchRentals() {
       const Rentals = Moralis.Object.extend("newBookings");
       const query = new Moralis.Query(Rentals);
@@ -21,14 +20,11 @@ function User({account}) {
     }
 
     fetchRentals();
-
-  }, [isVisible]);
-
+  }, [ isVisible ]);
 
   return (
-    <>
-      <div onClick={() => setVisible(true)}>
-        <Icon fill="#000000" size={24} svg="user" />
+      <><div onClick = {() => setVisible(true)}>
+      <Icon fill = "#000000" size = {24} svg = "user" />
       </div>
 
       <Modal
@@ -52,18 +48,17 @@ function User({account}) {
                       width="180px"
                       src={e.attributes.imgUrl}
                     />
-                  </div>
+      </div>
                 </Card>
-              </div>
+      </div>
             )
           })
 
          }
         </div>
-        
+
       </Modal>
-    </>
-  );
+    </>);
 }
 
 export default User;
