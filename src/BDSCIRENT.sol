@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
-contract bdscirent {
+contract BBEARS AirBnB {
 
     address public owner;
     uint256 private counter;
