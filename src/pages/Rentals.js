@@ -2,7 +2,7 @@ import React from "react";
 import "./Rentals.css";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
-import logo from "../images/airbnbRed.png";
+import logo from "../images/bdscirent-1.png";
 import { ConnectButton, Icon, Button, useNotification } from "web3uikit";
 import RentalsMap from "../components/RentalsMap";
 import { useState, useEffect } from "react";
