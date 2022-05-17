@@ -2,7 +2,7 @@ import React from "react";
 import "./Rentals.css";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
-import logo from "../images/bdscirent-1.png";
+import logo from "../images/bdscirent.png";
 import { ConnectButton, Icon, Button, useNotification } from "web3uikit";
 import RentalsMap from "../components/RentalsMap";
 import { useState, useEffect } from "react";
@@ -65,7 +65,7 @@ const Rentals = () => {
     }
 
     fetchRentalsList();
-  }, [searchFilters]);
+  }, [Moralis.Object, Moralis.Query, searchFilters]);
 
 
   const bookRental = async function (start, end, id, dayPrice) {

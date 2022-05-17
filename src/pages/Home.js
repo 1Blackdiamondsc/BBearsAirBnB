@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import bg from "../images/frontpagebg.png";
-import logo from "../images/bdscirent-1.png";
+import logo from "../images/bdscirent.png";
 import { ConnectButton, Icon, Select, DatePicker, Input, Button } from "web3uikit";
 import { useState } from "react";
 
