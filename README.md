@@ -1,4 +1,4 @@
-# BDSCIRent
+# BBEARSAirbnb
 
 Once all the prerequisites are fulfilled, clone the project by typing the following in terminal one line at a time :
 
