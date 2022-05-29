@@ -2,7 +2,7 @@ import React from "react";
 import "./Rentals.css";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
-import logo from "../images/airbnb.png";
+import logo from "../images/airbnbRed.png";
 import { ConnectButton, Icon, Button, useNotification } from "web3uikit";
 import RentalsMap from "../components/RentalsMap";
 import { useState, useEffect } from "react";
@@ -65,7 +65,7 @@ const Rentals = () => {
     }
 
     fetchRentalsList();
-  }, [Moralis.Object, Moralis.Query, searchFilters]);
+  }, [searchFilters]);
 
 
   const bookRental = async function (start, end, id, dayPrice) {
@@ -79,7 +79,7 @@ const Rentals = () => {
     }
 
     let options = {
-      contractAddress: "0x93ce21d5eEaED01176d80dc6431aeF69636D21a4",
+      contractAddress: "0x340870b7A9714BF2fb866E96B678f64Ea0aEB2b4",
       functionName: "addDatesBooked",
       abi: [
         {
@@ -218,15 +218,3 @@ const Rentals = () => {
 };
 
 export default Rentals;
-
-
-
-
-
-  
-    
-     
-    
-  
-
-
